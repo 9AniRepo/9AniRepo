@@ -6,3 +6,7 @@ Codename: ios
 Architectures: iphoneos-arm
 Components: main
 Description: APT repo for NineAnimator
+
+SHA256:
+ c05d0e66761ef37c7df2a661adee948228b926dc3342b971c13e174e42dc9513 586 Packages.bz2
+ 1d9b5e4395a6020a60b781557638bf7a723e3a49c418d055c0bd03d7017fff58 580 Packages.xz
