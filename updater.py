@@ -29,10 +29,10 @@ url = filtered[1]	# dl link for the file
 # create shell script to install NineAnimator
 with open('installer.sh', 'w') as f:	# create shell script and sets f to write mode
 	f.write('wget -q --no-check-certificate --content-disposition %s\n' % url)	# downloads nightly zip
-	f.write('unzip %s.zip\n' % name)	# unzip which outpus the ipa
+	f.write('unzip -q %s.zip\n' % name)	# unzip which outpus the ipa
 	f.write('mv %s.ipa app.zip\n' % name) # rename ipa
-	f.write('unzip app.zip\n')	# unzip which outputs the Payload
+	f.write('unzip -q app.zip\n')	# unzip which outputs the Payload
 	f.write('ldid Payload/*.app\n') # run ldid on the Payload and .app folder
-	f.write('zip -r output.ipa Payload\n') # rezip the Payload folder into ipa
+	f.write('zip -qr output.ipa Payload\n') # rezip the Payload folder into ipa
 	f.write('appinst output.ipa\n') # install ipa via appsync using appinst
 
