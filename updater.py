@@ -34,15 +34,15 @@ with open('installer.sh', 'w') as f:	# create shell script and sets f to write m
 	f.write('echo \'Unzipping Archive\'\n')
 	f.write('unzip -q %s.zip\n' % name)	# unzip which outpus the ipa
 	f.write('echo \'Unzip Complete\'\n')
-	f.write('echo \'rename zip to ipa\'\n')
+	f.write('echo \'Rename Zip to IPA\'\n')
 	f.write('mv %s.ipa app.zip\n' % name) # rename ipa
-	f.write('echo \'unziping app\'\n')
+	f.write('echo \'Unzipping App\'\n')
 	f.write('unzip -q app.zip\n')	# unzip which outputs the Payload
-	f.write('echo \'unzipping complete\'\n')
-	f.write('echo \'resigning app with ldid\'\n')
+	f.write('echo \'Unzip Complete\'\n')
+	f.write('echo \'Resigning App with ldid\'\n')
 	f.write('ldid Payload/*.app\n') # run ldid on the Payload and .app folder
-	f.write('echo \'resign complete\'\n')
-	f.write('echo \'rezipping app into ipa\'\n')
+	f.write('echo \'Resign Complete\'\n')
+	f.write('echo \'Rezipping App into IPA\'\n')
 	f.write('zip -qr output.ipa Payload\n') # rezip the Payload folder into ipa
-	f.write('echo \'rezip complete\'\n')
+	f.write('echo \'Rezip Complete\'\n')
 	f.write('appinst output.ipa\n') # install ipa via appsync using appinst
