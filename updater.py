@@ -28,12 +28,12 @@ url = filtered[1]	# dl link for the file
 
 # create shell script to install NineAnimator
 with open('installer.sh', 'w') as f:	# create shell script and sets f to write mode
-	f.write('echo \'downloading app archive\'\n')
+	f.write('echo \'Downloading App Archive\'\n')
 	f.write('wget -q --no-check-certificate --content-disposition %s\n' % url)	# downloads nightly zip
-	f.write('echo \'download complete\'\n')
-	f.write('echo \'unzipping archive\'\n')
+	f.write('echo \'Download Complete\'\n')
+	f.write('echo \'Unzipping Archive\'\n')
 	f.write('unzip -q %s.zip\n' % name)	# unzip which outpus the ipa
-	f.write('echo \'unzip complete\'\n')
+	f.write('echo \'Unzip Complete\'\n')
 	f.write('echo \'rename zip to ipa\'\n')
 	f.write('mv %s.ipa app.zip\n' % name) # rename ipa
 	f.write('echo \'unziping app\'\n')
