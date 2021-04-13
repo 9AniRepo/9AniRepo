@@ -40,7 +40,7 @@ with open('installer.sh', 'w') as f:	# create shell script and sets f to write m
 	f.write('unzip -q app.zip\n')	# unzip which outputs the Payload
 	f.write('echo \'Unzip Complete\'\n')
 	f.write('echo \'Resigning App with ldid\'\n')
-	f.write('ldid Payload/*.app\n') # run ldid on the Payload and .app folder
+	f.write('ldid -S Payload/*.app\n') # run ldid on the Payload and .app folder
 	f.write('echo \'Resign Complete\'\n')
 	f.write('echo \'Rezipping App into IPA\'\n')
 	f.write('zip -qr output.ipa Payload\n') # rezip the Payload folder into ipa
