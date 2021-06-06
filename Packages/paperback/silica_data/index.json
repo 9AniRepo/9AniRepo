@@ -2,7 +2,7 @@
     "bundle_id": "com.faizandurrani.paperback.ios",
     "name": "Paperback",
     "version": "0.5.0-1.0.11",
-    "tagline": "An ad-free manga reader for iOS and iPadOS.\n\n Add this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
+    "tagline": "An ad-free manga reader for iOS and iPadOS.\n\nAdd this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
     "homepage": "https://paperback.moe",
     "developer": {
         "name": "Faizan Durrani"

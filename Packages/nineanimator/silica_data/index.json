@@ -2,7 +2,7 @@
     "bundle_id": "com.marcuszhou.NineAnimator",
     "name": "NineAnimator",
     "version": "1.2.7-6",
-    "tagline": "Make backup if you updating or you'll lose data. Package uses appsync and appinst to install the app. This is the stable version with working downloads and such. Add this repo if you are having dependency issues: https://cydia.akemi.ai/",
+    "tagline": "An elegant way of discovering anime on iOS.\n\nPackage uses appsync and appinst to install the app. This is the stable version with working downloads and such.\n\nAdd this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
     "homepage": "https://nineanimator.marcuszhou.com/",
     "developer": {
         "name": "Marcus Zhou"

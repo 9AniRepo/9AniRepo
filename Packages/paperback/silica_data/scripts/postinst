@@ -5,4 +5,3 @@ appinst app.ipa
 rm -rf /var/mobile/tempPB/
 echo ''
 echo 'Installation Complete!'
-echo ''
