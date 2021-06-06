@@ -1,0 +1,31 @@
+#!/bin/bash
+
+cd /var/mobile/
+mkdir NineAnimatorInstaller
+cd ./NineAnimatorInstaller/
+echo 'Downloading updater.py'
+wget -q --no-check-certificate --content-disposition https://9anirepo.github.io/updater.py
+echo 'Download Finished'
+python3 updater.py
+sh installer.sh
+rm -rf /var/mobile/NineAnimatorInstaller/
+echo '                                        '
+echo '                                        '
+echo '                                        '
+echo '                                        '
+echo '                     @@                 '
+echo '                @@@@@@@@@@@             '
+echo '              @@@@@    @@@@@            '
+echo '             @@@@@@   @@@@@@@           '
+echo '              @@@@@@@@@@@@@@*           '
+echo '                @@@@  @@@@@@            '
+echo '            @@@@@@   @@@@@              '
+echo '            @@@@@@@@@@@@                '
+echo '                @@                      '
+echo '                                        '
+echo '                                        '
+echo '                                        '
+echo ''
+echo 'Installation Complete!'
+echo ''
+echo 'To update the app, simply reinstall this package'

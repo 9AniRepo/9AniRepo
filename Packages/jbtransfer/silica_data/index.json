@@ -1,0 +1,28 @@
+{
+    "bundle_id": "com.asianman.jbtransfer",
+    "name": "JBTransfer",
+    "version": "1.0",
+    "tagline": "A tool to help the user switch jailbreaks, devices, or both, all while keeping the sources, packages, and their preferences. I am not responsible for any issues this package may cause. I have tested this on my 8 plus, switching between Taurine and Checkra1n with no issues; however, that may not always be the case, so make a backup before using. Instructions at: https://github.com/Asianman132/JBTransfer",
+    "developer": {
+        "name": "AsianMan"
+    },
+    "maintainer": {
+        "name": "AsianMan"
+    },
+    "section": "Utilities",
+	"pre_dependencies": "python3, grep, zip, unzip",
+    "works_min": "11.0",
+    "works_max": "14.x",
+    "featured": "true",
+	"source": "https://github.com/Asianman132/JBTransfer",
+    "changelog": [
+        {
+            "version": "1.0",
+            "changes": "Initial stable release"
+        },
+		{
+            "version": "0.1",
+            "changes": "Initial development release"
+        }
+    ]
+}

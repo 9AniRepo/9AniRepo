@@ -1,0 +1,126 @@
+#!/bin/bash
+
+# check if JBT zip exists
+if test -f /var/mobile/Documents/JBTransfer.zip
+then
+    # unzip archive
+    echo ''
+    echo 'Unzipping archive...'
+    cd /var/mobile/Documents/
+    unzip -q ./JBTransfer.zip
+
+    # compare sources and add missing
+    echo 'Transfering sources...'
+    python3 /JBTemp/sourceCheck.py
+
+    # compare packages and install
+    echo 'Refreshing sources... (this may take a while)'
+    echo 'Ignore any insecure sources and APT warnings that come after'
+    apt -qq update --allow-insecure-repositories
+    apt list --installed > /JBTemp/packages.txt
+    echo 'Generateing install script...'
+    python3 /JBTemp/packagesCheck.py
+
+    # copy over prefs
+    echo 'Copying over preference files'
+    mv -n ./JBTransfer/preferences/*.plist /var/mobile/Library/Preferences/
+
+    # clean up temp dirs
+    echo 'Removing temp directories...'
+    rm -rf /JBTemp/
+    rm -rf /var/mobile/Documents/JBTransfer/
+
+    echo ''
+    echo ''
+    echo ''
+    echo ''
+    echo ''
+    echo '                                  .@@@@@@@@&'
+    echo '                         @@@@@@       @@'
+    echo '               @@   ,@@,     @@/      @@'
+    echo '           @@* @@/  ,@@   @@@@@.      @@'
+    echo '               @@/  ,@@@.     @@,     @@'
+    echo '               @@/  ,@@     ,@@@'
+    echo '       @@      @@   ,@@@@@@@,'
+    echo '       @@@@@@@@.'
+    echo ''
+    echo ''
+    echo ''
+    echo ''
+    echo ''
+    echo ''
+    echo 'To complete installation run the shell script at `/var/mobile/Documents/JBTinstall.sh` as root. This will install all the packages, generate a log, and ldrestart your device.'
+    echo ''
+    exit 0
+fi
+
+# dir for storing data
+cd /var/mobile/Documents/
+mkdir JBTransfer
+cd ./JBTransfer/
+mkdir preferences
+
+# temp dir to store source lists
+cd /JBTemp/
+mkdir sources
+
+# generate sources list
+echo ''
+echo 'Generating source list...'
+python3 sources.py
+
+# move source lists prior to generating tweaklist
+mv /etc/apt/sources.list.d/* ./sources/
+mv ./JBTsources.list /etc/apt/sources.list.d/
+
+# generate packagelist, move back source lists, and move generated source list to proper dir
+echo 'Refreshing sources... (this may take a while)'
+echo 'Ignore any insecure sources and APT warnings that come after'
+apt -qq update --allow-insecure-repositories
+apt list --installed > /JBTemp/packages.txt
+rm /etc/apt/sources.list.d/JBTsources.list
+mv ./sources/* /etc/apt/sources.list.d/
+
+# format packageslist
+echo 'Generating packagelist...'
+python3 packages.py
+
+echo "Copying preferences..."
+# gather pref files
+ls /var/mobile/Library/Preferences | grep '.plist' > prefs.txt
+python3 preferences.py
+sh ./cpprefs.sh
+
+# logging script
+mv ./log.py /var/mobile/Documents/JBTransfer/
+
+# zip up dir
+echo 'Zipping archive...'
+cd /var/mobile/Documents/
+zip -qr ./JBTransfer.zip ./JBTransfer/
+cd /
+
+# delete dirs
+echo 'Removing temp directories...'
+rm -rf /JBTemp/
+rm -rf /var/mobile/Documents/JBTransfer/
+
+echo ''
+echo ''
+echo ''
+echo ''
+echo ''
+echo '                                  .@@@@@@@@&'
+echo '                         @@@@@@       @@'
+echo '               @@   ,@@,     @@/      @@'
+echo '           @@* @@/  ,@@   @@@@@.      @@'
+echo '               @@/  ,@@@.     @@,     @@'
+echo '               @@/  ,@@     ,@@@'
+echo '       @@      @@   ,@@@@@@@,'
+echo '       @@@@@@@@.'
+echo ''
+echo ''
+echo ''
+echo ''
+echo ''
+echo ''
