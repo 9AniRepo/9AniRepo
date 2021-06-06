@@ -8,5 +8,5 @@ Components: main
 Description: APT repo for NineAnimator
 
 SHA256:
- 76a4d1b35c280787f347d88a207ba7c48de4ab17298dd809fdbc410f0e496bee 1416 Packages.bz2
- 8f5444715c38c3a74fecbf24f0812fedaa50d86ef1f5b5510da0f429bd77b9b2 1328 Packages.xz
+ b722d85e4f01e9d20d515215d3ce9a2c1a6dcf77e3e964faa5d67f3c5cb5e9f9 1420 Packages.bz2
+ cde3ba1d276755489124a5f41be82418692f97f04308275365ed78d02e73ae91 1324 Packages.xz
