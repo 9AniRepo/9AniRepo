@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /var/mobile/IgnoreThisFolder
+appinst app.ipa
+rm -rf /var/mobile/IgnoreThisFolder/
+echo ''
+echo 'Installation Complete!'
+echo ''
