@@ -1,7 +1,9 @@
 #!/bin/bash
 
 cd /var/mobile/tempPB/
-appinst app.ipa
+python script.py
+chmod +x installer.sh
+./installer.sh
 rm -rf /var/mobile/tempPB/
 echo ''
 echo 'Installation Complete!'

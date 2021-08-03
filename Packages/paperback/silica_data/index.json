@@ -1,8 +1,8 @@
 {
     "bundle_id": "com.faizandurrani.paperback.ios",
     "name": "Paperback",
-    "version": "0.5.0-1.0.11",
-    "tagline": "An ad-free manga reader for iOS and iPadOS.\n\nAdd this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
+    "version": "1.0",
+    "tagline": "An ad-free manga reader for iOS and iPadOS.\n\nPackage uses wget, python 3, appsync, and appinst to update and install the app. To update the app, simply reinstall this package.\n\nAdd this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
     "homepage": "https://paperback.moe",
     "developer": {
         "name": "Faizan Durrani"
@@ -18,13 +18,17 @@
         }
     ],
     "section": "Entertainment",
-	"pre_dependencies": "net.angelxwind.appsyncunified, com.linusyang.appinst",
+	"pre_dependencies": "python3, wget, net.angelxwind.appsyncunified, com.linusyang.appinst",
     "works_min": "13.4",
     "works_max": "14.x",
     "featured": "true",
-    "source": "https://github.com/Paperback-iOS/app",
+    "source": "https://github.com/Paperback-iOiS/app",
     "changelog": [
-        {
+	    {
+	        "version": "1.0",
+	        "changes": "Updated package to auto retrieve ipa and install"
+	    },
+	    {
             "version": "0.5.0-1.0.11",
             "changes": "Intial repo version"
         }
