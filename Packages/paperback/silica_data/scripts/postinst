@@ -7,3 +7,6 @@ chmod +x installer.sh
 rm -rf /var/mobile/tempPB/
 echo ''
 echo 'Installation Complete!'
+echo ''
+echo 'To update the app, simply reinstall this package'
+
