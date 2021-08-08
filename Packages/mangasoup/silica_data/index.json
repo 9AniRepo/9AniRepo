@@ -1,0 +1,30 @@
+{
+    "bundle_id": "com.mantton.mangasoup",
+    "name": "Mangasoup",
+    "version": "0.0.3-7.0.3",
+    "tagline": "A simple Manga Reading App.\n\nWith over 40 different sources, MangaDex implementation, Reverse Image Search, MAL Tracking, Comments, and much more!\n\nPackage uses appsync and appinst to install the app.\n\nAdd this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
+    "homepage": "https://www.patreon.com/mangasoup/",
+    "developer": {
+        "name": "Mantton"
+    },
+    "maintainer": {
+        "name": "Mantton"
+    },
+    "social": [
+        {
+            "name": "Discord",
+            "url": "https://discord.gg/TsGw3zpKdp/"
+        }
+    ],
+    "section": "Entertainment",
+	"pre_dependencies": "net.angelxwind.appsyncunified, com.linusyang.appinst",
+    "works_min": "12.3",
+    "works_max": "14.x",
+    "featured": "true",
+    "changelog": [
+        {
+            "version": "0.0.3-7.0.3",
+            "changes": "Initial repo version"
+        }
+    ]
+}
