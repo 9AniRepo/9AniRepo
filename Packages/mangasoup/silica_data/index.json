@@ -5,10 +5,10 @@
     "tagline": "A simple Manga Reading App.\n\nWith over 40 different sources, MangaDex implementation, Reverse Image Search, MAL Tracking, Comments, and much more!\n\nPackage uses appsync and appinst to install the app.\n\nAdd this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
     "homepage": "https://www.patreon.com/mangasoup/",
     "developer": {
-        "name": "Mantton"
+        "name": "Shedrach Uzoukwu"
     },
     "maintainer": {
-        "name": "Mantton"
+        "name": "Shedrach Uzoukwu"
     },
     "social": [
         {
