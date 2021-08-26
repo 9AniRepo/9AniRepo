@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo 'Uninstallation Complete!'
-echo ''
-echo 'The package has been succesfully removed, but the app remains. To remove the app simply delete it like any other app'
