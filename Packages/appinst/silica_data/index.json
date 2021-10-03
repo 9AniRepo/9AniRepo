@@ -1,0 +1,16 @@
+{
+    "bundle_id": "com.linusyang.appinst",
+    "name": "appinst",
+    "version": "1.1.4",
+    "tagline": "Mirror of appinst for those who don't have the <https://cydia.akemi.ai/> repo. Licensed under GPLv3.",
+    "developer": {
+        "name": "Karen, Linus Yang"
+    },
+    "maintainer": {
+        "name": "Karen"
+    },
+    "section": "Utilities",
+    "works_min": "5.1",
+    "works_max": "69.0",
+    "source": "https://github.com/akemin-dayo/AppSync/tree/master/appinst"
+}
