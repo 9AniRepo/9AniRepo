@@ -1,7 +1,7 @@
 {
     "bundle_id": "com.marcuszhou.NineAnimator",
     "name": "NineAnimator",
-    "version": "1.2.7-6a",
+    "version": "1.2.7-6b",
     "tagline": "An elegant way of discovering anime on iOS.\n\nPackage uses appsync and appinst to install the app. This is the stable version with working downloads and such.\n\nAdd this repo if you are having dependency issues: <https://cydia.akemi.ai/>",
     "homepage": "https://nineanimator.marcuszhou.com/",
     "developer": {
@@ -50,6 +50,10 @@
         {
 			"version": "1.2.7-6a",
 			"changes": "Fix Array and Pantsu"
+        },
+        {
+            "version": "1.2.7-6b",
+            "changes": "Update to the latest nightly"
         }
     ]
 }
